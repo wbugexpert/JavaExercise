@@ -1,4 +1,4 @@
-# Java_Execrise
+# Java_Exercise
 ***
 ***
 ## 说明

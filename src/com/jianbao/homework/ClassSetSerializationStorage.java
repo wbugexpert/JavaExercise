@@ -8,5 +8,5 @@ package com.jianbao.homework;
  * 可以根据一个权限找到具备此权限的所有用户信息。
  * 【图片见课本P201】
  */
-public class classSetSerializationStorage {
+public class ClassSetSerializationStorage {
 }

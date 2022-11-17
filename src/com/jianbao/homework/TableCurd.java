@@ -13,5 +13,5 @@ package com.jianbao.homework;
  * ) engine=INNODB;
  * 【图片6-35见课本P230】
  */
-public class tableCurd {
+public class TableCurd {
 }
