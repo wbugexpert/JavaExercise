@@ -28,6 +28,7 @@ Process finished with exit code 0
     - #### **国际化程序**
     - > 编写程序，实现国际化程序，通过命令行输入国家的代号，例如，1表示中国，2表示美国。根据输入代号不同调用不同的资源文件来显示信息。
 - 实现包：**programInternationalization**
+- 主函数类：**ProgramInternationalization**
 - 运行结果：
 - 
     - *case1：*
@@ -86,6 +87,7 @@ Process finished with exit code 0
     - #### **用户登录认证**
     - > 完成系统登录程序，可以通过初始化参数方式配置用户名和密码。如果用户没有输入用户名和密码，则提示输入用户名和密码；如果用户输入了用户名但是没有输入密码，则提示用户输入密码。判断用户名是否为jianbao，密码是否为jianbao，如是，则提示登陆成功；如不是，显示登陆失败信息。用户再次输入用户名和密码，连续3次输入错误后自动退出。
 - 实现包：userLogin
+- 主函数类：Client
 - 运行结果：
 -
     - *case1：* args[]={ jianbao,jianbao }
@@ -156,18 +158,10 @@ aaa
 请输入用户名
 jianbao
 请输入密码
-sssss
-【ERROR】登陆失败，用户名和密码不匹配！
-请输入用户名
 jianbao
-请输入密码
-sssssaassas
-【ERROR】登陆失败，用户名和密码不匹配！
-Exception in thread "main" com.jianbao.homework.userLogin.exception.MaxTryCountException: 尝试次数超限，系统退出！
-	at com.jianbao.homework.userLogin.main.LoginMain.<init>(LoginMain.java:23)
-	at com.jianbao.homework.userLogin.Client.main(Client.java:17)
+【SUCCESS】欢迎你，尖宝！
 
-Process finished with exit code 1
+Process finished with exit code 0
 ```
 ***
 ### **集合框架**
@@ -230,11 +224,4 @@ Process finished with exit code 1
 ```
 ***
 ***
-
-# 补充说明
-> 本功能包目录下，“课程”代指本人大三上学期修的课程 软件开发基础（Java）  
->              “老师”代指课程的任教老师  
->              “作业”代指老师布置的作业  
->              “课本”是Java进阶开发实战--李兴华 马云涛编著 中国工信出版集团 人民邮电出版社
-
 
