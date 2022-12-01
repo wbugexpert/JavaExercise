@@ -86,8 +86,8 @@ Process finished with exit code 0
 - 题目描述：
     - #### **用户登录认证**
     - > 完成系统登录程序，可以通过初始化参数方式配置用户名和密码。如果用户没有输入用户名和密码，则提示输入用户名和密码；如果用户输入了用户名但是没有输入密码，则提示用户输入密码。判断用户名是否为jianbao，密码是否为jianbao，如是，则提示登陆成功；如不是，显示登陆失败信息。用户再次输入用户名和密码，连续3次输入错误后自动退出。
-- 实现包：userLogin
-- 主函数类：Client
+- 实现包：**userLogin**
+- 主函数类：**Client**
 - 运行结果：
 -
     - *case1：* args[]={ jianbao,jianbao }
@@ -173,11 +173,37 @@ Process finished with exit code 0
       > - 可以根据一个用户找到该用户对应的所有角色,以及每一个角色对应的所有权限信息；
       > - 可以根据一个角色找到该角色下的所有权限，以及拥有此角色的全部用户信息；
       > - 可以根据一个权限找到具备此权限的所有用户信息。
-      > - 【图片见课本P201】
-- 实现类：**ClassSetSerializationStorage**
+      > - <img src="../../../../picture/homework_P201_5.13.1.png" width="800" height="200"/>
+- 实现包：**classSetSerializationStorage**
+- 主函数类：**ClassSetSerializationStorage**
 - 运行结果：
 ```
+---------【1】根据用户查找对应信息-------------------------
+【用户】用户id= jianbao-1  姓名:尖宝1
+	|- 【角色】角色id= user  姓名:用户管理
+		|- 【权限】权限id= user:add  姓名:增加用户
+		|- 【权限】权限id= user:edit  姓名:修改用户
+		|- 【权限】权限id= user:delete  姓名:删除用户
+		|- 【权限】权限id= user:select  姓名:查询用户
+	|- 【角色】角色id= backup  姓名:系统备份
+		|- 【权限】权限id= backup:all  姓名:全量备份
+		|- 【权限】权限id= backup:inc  姓名:增量备份
+		|- 【权限】权限id= backup:recover  姓名:备份恢复
+---------【2】根据角色查找对应信息-------------------------
+【角色】角色id= user  姓名:用户管理
+	|- 【用户】用户id= jianbao-1  姓名:尖宝1
+	|- 【用户】用户id= jianbao-2  姓名:尖宝2
+	|- 【权限】权限id= user:add  姓名:增加用户
+	|- 【权限】权限id= user:edit  姓名:修改用户
+	|- 【权限】权限id= user:delete  姓名:删除用户
+	|- 【权限】权限id= user:select  姓名:查询用户
+---------【3】根据权限查找对应信息-------------------------
+【权限】权限id= user:edit  姓名:修改用户
+	|- 【角色】角色id= user  姓名:用户管理
+		|- 【用户】用户id= jianbao-1  姓名:尖宝1
+		|- 【用户】用户id= jianbao-2  姓名:尖宝2
 
+Process finished with exit code 0
 ```
 
 - 题目来源：课本P201 5.13.3
@@ -187,7 +213,13 @@ Process finished with exit code 0
 - 实现类：**StudentsScoreStatistics**
 - 运行结果：
 ```
+【Student】 学号： 1003 姓名： 王五 数学成绩： 60.0 英语成绩： 74.2 编程成绩： 77.3 各科平均成绩： 70.5 总成绩: 211.5
+【Student】 学号： 1002 姓名： 李四 数学成绩： 52.3 英语成绩： 76.6 编程成绩： 88.2 各科平均成绩： 72.37 总成绩: 217.1
+【Student】 学号： 1001 姓名： 张三 数学成绩： 100.0 英语成绩： 66.6 编程成绩： 52.6 各科平均成绩： 73.07 总成绩: 219.2
+【Student】 学号： 1005 姓名： 田七 数学成绩： 54.2 英语成绩： 79.5 编程成绩： 84.6 各科平均成绩： 72.77 总成绩: 218.3
+【Student】 学号： 1004 姓名： 赵六 数学成绩： 83.6 英语成绩： 99.2 编程成绩： 84.1 各科平均成绩： 88.97 总成绩: 266.9
 
+Process finished with exit code 0
 ```
 ***
 ### **数据库**
@@ -206,18 +238,28 @@ Process finished with exit code 0
       >     CONSTRIANT pk_uid PRIMARY KEY (uid)
       > ) engine=INNODB;
       > ```
-      > - 【图片6-35见课本P230】
-- 实现类：**TableCurd**
+      > - <img src="../../../../picture/homework_P230_6.9.2.jpg" width="400" height="200"/>
+- 实现包：**tableCrud**
+- 主函数类：**TableCrud**
 - 运行结果：
 ```
+true
+true
+【用户表】uid=10086, name=尖宝, note=jianbao.com
+true
+【用户表】uid=10086, name=尖宝爱你, note=jianbao.com
+[【用户表】uid=10086, name=尖宝爱你, note=jianbao.com, 【用户表】uid=100860, name=尖宝尖宝, note=jianbao.com]
+true
 
+Process finished with exit code 0
 ```
 
 - 题目来源：课本P230 6.9.3
 - 题目描述：
     - #### **动态DDL操作**
     - > 定义一任意的简单Java类，并可以基于此简单的Java类的结构生成数据库创建脚本。
-- 实现类：**DynamicDDL**
+- 实现包：**dynamicDDL**
+- 主函数类：**DynamicDDL**
 - 运行结果：
 ```
 

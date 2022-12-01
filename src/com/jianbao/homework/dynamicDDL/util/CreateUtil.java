@@ -11,7 +11,7 @@ public class CreateUtil {
         StringBuffer sql = new StringBuffer() ;
         TableBean tableBean = AnnotationParseUtil.handle(clazz);
         if (tableBean.isBeforeDelete()) {   // 在执行之前进行数据表的删除
-            sql.append("DROP TABLE IF EXISTS " + tableBean.getName() + "; \n") ;
+            sql.append("DROP TABLE IF EXISTS " + tableBean.getName() + ";\n") ;
         }
         sql.append("CREATE TABLE " + tableBean.getName() + "( \n") ;
         String primary = null ; // 保存主键信息
