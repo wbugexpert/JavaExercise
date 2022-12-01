@@ -552,3 +552,18 @@ true
 Process finished with exit code 0
 ```
 
+- 题目来源：课本1.9 正则表达式 P34
+- 题目描述：
+  - #### **Pattern实现字符串拆分**
+  - > 对正则表达式进行编译处理并用其提供的compile方法实现字符串拆分。
+- 实现类：**PatternCompile**
+- 运行结果：
+```
+jianbao
+jianbao
+jianbao
+jianbao
+
+Process finished with exit code 0
+```
+
